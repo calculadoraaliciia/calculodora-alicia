@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cómo Calcular la Regla de Tres (Simple y Compuesta) — Guía 2026</title>
+<meta name="description" content="Aprende a resolver la regla de tres simple directa, simple inversa y compuesta paso a paso, con ejemplos resueltos de la vida real.">
+<link rel="canonical" href="https://calculadoraaliciia.es/blog/como-calcular-regla-de-tres">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+<meta name="bingbot" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Cómo calcular la regla de tres simple",
+  "description": "Método paso a paso para resolver una regla de tres simple, directa o inversa.",
+  "step": [
+    { "@type": "HowToStep", "name": "Identifica los tres datos conocidos y la incógnita", "text": "Escribe los datos en forma de proporción: a es a b como c es a x." },
+    { "@type": "HowToStep", "name": "Determina si es directa o inversa", "text": "Si al aumentar un valor el otro también aumenta, es directa. Si al aumentar uno el otro disminuye, es inversa." },
+    { "@type": "HowToStep", "name": "Aplica el producto cruzado (directa) o el producto simple (inversa)", "text": "En la directa: x = (b × c) / a. En la inversa: x = (a × b) / c." },
+    { "@type": "HowToStep", "name": "Calcula y comprueba el resultado", "text": "Resuelve la operación y verifica que el resultado tenga sentido según el contexto del problema." }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es la regla de tres?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Es un método para calcular un valor desconocido a partir de tres valores conocidos que guardan una relación de proporcionalidad, ya sea directa o inversa." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo sé si una regla de tres es directa o inversa?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Es directa cuando al aumentar una magnitud la otra también aumenta (por ejemplo, más kilos, más precio). Es inversa cuando al aumentar una magnitud la otra disminuye (por ejemplo, más obreros, menos tiempo)." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál es la fórmula de la regla de tres simple directa?",
+      "acceptedAnswer": { "@type": "Answer", "text": "x = (b × c) / a, donde a y b son el primer par de valores conocidos y c es el tercer valor conocido correspondiente a la incógnita x." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué es la regla de tres compuesta?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Es una regla de tres con más de dos magnitudes relacionadas a la vez, como cuando el resultado depende tanto del número de trabajadores como de las horas trabajadas." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Para qué se usa la regla de tres en la vida real?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Se usa para calcular precios por cantidad, velocidades y tiempos, recetas de cocina ajustadas a más o menos personas, descuentos, y muchos problemas de proporcionalidad cotidianos." }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --bg:#f7f6fb;
+    --surface:#ffffff;
+    --ink:#221f33;
+    --ink-soft:#615c78;
+    --indigo:#4338ac;
+    --indigo-dark:#332a86;
+    --indigo-soft:#eae7fb;
+    --gold:#c9973a;
+    --gold-soft:#faf2df;
+    --teal:#1f7a6c;
+    --teal-soft:#e4f4f0;
+    --border:#e4e0f3;
+    --radius:16px;
+    --shadow:0 10px 28px rgba(51,42,134,0.09);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Inter',system-ui,-apple-system,Segoe UI,sans-serif;
+    line-height:1.7;
+    font-size:17px;
+  }
+  h1,h2,h3{ font-family:'Fraunces',Georgia,serif; color:var(--ink); line-height:1.2; }
+
+  .wrap{max-width:760px;margin:0 auto;padding:0 20px 80px;}
+
+  .hero{
+    background:linear-gradient(135deg,var(--indigo) 0%, #6a5cd0 100%);
+    color:#fff; padding:52px 32px 60px; margin:0 0 -30px; border-radius:0 0 32px 32px;
+  }
+  .hero .inner{ max-width:720px; margin:0 auto; }
+  .hero .eyebrow{
+    display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:12px;
+    letter-spacing:.08em; text-transform:uppercase; color:#fff; background:rgba(255,255,255,0.18);
+    padding:6px 14px; border-radius:999px; margin-bottom:18px;
+  }
+  .hero h1{ color:#fff; font-size:clamp(28px,5vw,40px); margin:0 0 14px; }
+  .hero p.dek{ color:rgba(255,255,255,0.88); font-size:18px; max-width:600px; margin:0; }
+
+  .content-card{
+    background:var(--surface); border-radius:var(--radius); box-shadow:var(--shadow);
+    padding:34px 32px; margin-top:30px; position:relative; z-index:1;
+  }
+
+  .lede{ font-size:18px; }
+  .lede a, p a, li a{ color:var(--indigo); font-weight:700; text-decoration-thickness:2px; }
+
+  h2{ font-size:24px; margin:40px 0 16px; padding-top:8px; border-top:1px solid var(--border); }
+  .content-card > h2:first-of-type{ border-top:none; padding-top:0; margin-top:0; }
+
+  /* PROPORTION BOX */
+  .prop-box{
+    background:var(--indigo-soft); border-radius:14px; padding:24px; margin:20px 0; text-align:center;
+  }
+  .prop-row{ display:flex; align-items:center; justify-content:center; gap:14px; font-family:'Fraunces',serif; font-weight:700; font-size:22px; color:var(--indigo-dark); flex-wrap:wrap; }
+  .prop-row .cell{ background:#fff; border-radius:10px; padding:8px 16px; box-shadow:0 3px 10px rgba(51,42,134,0.08); }
+  .prop-row .sep{ color:var(--indigo); font-size:18px; }
+  .prop-note{ font-size:13.5px; color:var(--ink-soft); margin-top:12px; font-family:'Inter',sans-serif; font-weight:400; }
+  .cross{ position:relative; width:100%; text-align:center; margin:14px 0; font-size:13px; color:var(--gold); font-weight:700; }
+
+  /* DIRECT VS INVERSE CARDS */
+  .compare{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:20px 0; }
+  @media (max-width:560px){ .compare{ grid-template-columns:1fr; } }
+  .comp-card{ border-radius:12px; padding:18px 20px; }
+  .comp-card.direct{ background:var(--teal-soft); border:1px solid #c7e6de; }
+  .comp-card.inverse{ background:var(--gold-soft); border:1px solid #ecd9ab; }
+  .comp-card .tag{ font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; }
+  .comp-card.direct .tag{ color:var(--teal); }
+  .comp-card.inverse .tag{ color:var(--gold); }
+  .comp-card h3{ font-size:17px; margin:6px 0 8px; }
+  .comp-card p{ margin:0; font-size:14.5px; color:var(--ink-soft); }
+  .comp-card .formula{ font-family:'Fraunces',serif; font-weight:700; margin-top:10px; font-size:15px; color:var(--ink); }
+
+  .example{
+    background:#faf9fd; border:1px solid var(--border); border-radius:12px; padding:18px 20px; margin:16px 0;
+  }
+  .example .lbl{ font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:var(--indigo); margin-bottom:8px; }
+  .example .steps-line{ font-family:'Fraunces',serif; font-size:15.5px; margin:4px 0; }
+
+  .callout{ border-radius:12px; padding:16px 20px; margin:20px 0; font-size:15.5px; }
+  .callout.note{ background:var(--gold-soft); border-left:4px solid var(--gold); }
+  .callout strong{ display:block; margin-bottom:4px; font-family:'Fraunces',serif; font-size:15px; color:#8a6a1f; }
+
+  ol,ul{ padding-left:22px; } li{ margin-bottom:8px; }
+
+  .cta-box{
+    background:var(--indigo); color:#fff; border-radius:var(--radius); padding:28px 32px; margin:36px 0; text-align:center;
+  }
+  .cta-box h3{ color:#fff; margin:0 0 8px; font-size:21px; }
+  .cta-box p{ color:rgba(255,255,255,0.88); margin:0 0 18px; font-size:15px; }
+  .cta-box a.btn{
+    display:inline-block; background:#fff; color:var(--indigo-dark); font-weight:700;
+    padding:12px 26px; border-radius:999px; text-decoration:none; font-size:15px;
+  }
+
+  details{ background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:16px 20px; margin-bottom:10px; }
+  details[open]{ border-color:#c7bdf0; }
+  summary{
+    font-family:'Fraunces',serif; font-weight:700; font-size:16px; cursor:pointer; list-style:none;
+    display:flex; justify-content:space-between; align-items:center; color:var(--ink);
+  }
+  summary::-webkit-details-marker{ display:none; }
+  summary::after{ content:'+'; font-size:22px; color:var(--indigo); margin-left:12px; flex-shrink:0; }
+  details[open] summary::after{ content:'−'; }
+  details p{ margin:12px 0 2px; color:var(--ink-soft); }
+
+  footer.meta{ text-align:center; color:var(--ink-soft); font-size:13px; margin-top:30px; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="inner">
+    <span class="eyebrow">⚖️ Proporcionalidad</span>
+    <h1>Cómo Calcular la Regla de Tres (Simple y Compuesta)</h1>
+    <p class="dek">La regla de tres explicada paso a paso, con ejemplos resueltos de precios, tiempos y recetas.</p>
+  </div>
+</div>
+
+<div class="wrap">
+<div class="content-card">
+<article>
+
+<p class="lede">La regla de tres es el método más usado para calcular un valor desconocido cuando conoces otros tres valores relacionados por una proporción. Puedes resolver cualquier regla de tres a mano en unos segundos, o comprobar tu resultado con la <a href="https://calculadoraaliciia.es/" target="_blank" rel="noopener">calculadora de Calculadora Alicia</a>, que muestra el procedimiento completo.</p>
+
+<h2>La estructura básica</h2>
+<p>Toda regla de tres simple parte de una proporción entre cuatro valores: tres que conoces y uno que quieres averiguar (la incógnita, normalmente llamada x).</p>
+
+<div class="prop-box">
+  <div class="prop-row">
+    <span class="cell">a</span><span class="sep">es a</span><span class="cell">b</span>
+  </div>
+  <div class="cross">↕ producto cruzado ↕</div>
+  <div class="prop-row">
+    <span class="cell">c</span><span class="sep">es a</span><span class="cell">x</span>
+  </div>
+  <p class="prop-note">a × x = b × c &nbsp;→&nbsp; x = (b × c) / a</p>
+</div>
+
+<h2>Regla de tres directa vs. inversa</h2>
+<p>Antes de aplicar la fórmula, tienes que identificar qué tipo de relación tienen las magnitudes.</p>
+
+<div class="compare">
+  <div class="comp-card direct">
+    <span class="tag">Directa</span>
+    <h3>Cuando ambas suben juntas</h3>
+    <p>Si aumenta una magnitud, la otra también aumenta en la misma proporción. Ejemplo: más kilos de fruta, más euros pagas.</p>
+    <div class="formula">x = (b × c) / a</div>
+  </div>
+  <div class="comp-card inverse">
+    <span class="tag">Inversa</span>
+    <h3>Cuando una sube y la otra baja</h3>
+    <p>Si aumenta una magnitud, la otra disminuye. Ejemplo: más obreros trabajando, menos días se tarda en terminar.</p>
+    <div class="formula">x = (a × b) / c</div>
+  </div>
+</div>
+
+<h2>Ejemplo resuelto: regla de tres directa</h2>
+<div class="example">
+  <div class="lbl">Problema</div>
+  <p>3 kilos de naranjas cuestan 4,50 €. ¿Cuánto cuestan 5 kilos?</p>
+  <div class="lbl">Solución</div>
+  <p class="steps-line">3 kg —— 4,50 €</p>
+  <p class="steps-line">5 kg —— x</p>
+  <p class="steps-line">x = (4,50 × 5) / 3 = 22,50 / 3 = <strong>7,50 €</strong></p>
+</div>
+
+<h2>Ejemplo resuelto: regla de tres inversa</h2>
+<div class="example">
+  <div class="lbl">Problema</div>
+  <p>4 obreros tardan 6 días en construir un muro. ¿Cuántos días tardarían 8 obreros trabajando al mismo ritmo?</p>
+  <p class="steps-line">4 obreros —— 6 días</p>
+  <p class="steps-line">8 obreros —— x</p>
+  <p class="steps-line">x = (4 × 6) / 8 = 24 / 8 = <strong>3 días</strong></p>
+</div>
+
+<div class="callout note">
+  <strong>Error común</strong>
+  Aplicar la fórmula directa cuando la relación en realidad es inversa (o al revés). Antes de calcular, pregúntate siempre: "si una magnitud sube, ¿la otra sube o baja?"
+</div>
+
+<h2>Regla de tres compuesta</h2>
+<p>Cuando el resultado depende de más de dos magnitudes a la vez, usas una regla de tres compuesta. Por ejemplo: "6 obreros trabajando 8 horas al día tardan 5 días en hacer una obra. ¿Cuántos días tardarían 4 obreros trabajando 10 horas al día?" Aquí combinas dos relaciones (obreros y horas) que afectan a los días, cada una con su propio signo directo o inverso, en una sola ecuación.</p>
+
+<ol>
+  <li>Identifica cada magnitud y si su relación con la incógnita es directa o inversa.</li>
+  <li>Coloca cada fracción en su posición correcta (normal si es directa, invertida si es inversa).</li>
+  <li>Multiplica todo y despeja la incógnita.</li>
+</ol>
+
+<div class="cta-box">
+  <h3>Comprueba tu resultado al instante</h3>
+  <p>Usa la calculadora de Calculadora Alicia para verificar cualquier regla de tres con el procedimiento completo.</p>
+  <a class="btn" href="https://calculadoraaliciia.es/" target="_blank" rel="noopener">Ir a Calculadora Alicia →</a>
+</div>
+
+<h2>Preguntas frecuentes</h2>
+
+<details>
+  <summary>¿Qué es la regla de tres?</summary>
+  <p>Un método para calcular un valor desconocido a partir de tres valores conocidos que guardan una relación de proporcionalidad.</p>
+</details>
+
+<details>
+  <summary>¿Cómo sé si una regla de tres es directa o inversa?</summary>
+  <p>Es directa si al aumentar una magnitud la otra también aumenta. Es inversa si al aumentar una, la otra disminuye.</p>
+</details>
+
+<details>
+  <summary>¿Cuál es la fórmula de la regla de tres simple directa?</summary>
+  <p>x = (b × c) / a, usando el producto cruzado de los valores conocidos.</p>
+</details>
+
+<details>
+  <summary>¿Qué es la regla de tres compuesta?</summary>
+  <p>Una regla de tres con más de dos magnitudes relacionadas a la vez, cada una con su propia relación directa o inversa.</p>
+</details>
+
+<details>
+  <summary>¿Para qué se usa la regla de tres en la vida real?</summary>
+  <p>Para precios por cantidad, velocidades y tiempos, recetas ajustadas, descuentos y muchos problemas cotidianos de proporcionalidad.</p>
+</details>
+
+<footer class="meta">Última actualización: agosto de 2026</footer>
+</article>
+</div>
+</div>
+</body>
+</html>
